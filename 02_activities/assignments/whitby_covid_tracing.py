@@ -12,6 +12,9 @@ import seaborn as sns
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
+# Set a global random seed for reproducibility
+np.random.seed(10)
+
 # Constants representing the parameters of the model
 ATTACK_RATE = 0.10
 TRACE_SUCCESS = 0.20
@@ -67,17 +70,29 @@ def simulate_event(m):
 
   return p_wedding_infections, p_wedding_traces
 
-# Run the simulation 50000 times
-results = [simulate_event(m) for m in range(50000)]
-props_df = pd.DataFrame(results, columns=["Infections", "Traces"])
 
-# Plotting the results
-plt.figure(figsize=(10, 6))
-sns.histplot(props_df['Infections'], color="blue", alpha=0.75, binwidth=0.05, kde=False, label='Infections from Weddings')
-sns.histplot(props_df['Traces'], color="red", alpha=0.75, binwidth=0.05, kde=False, label='Traced to Weddings')
-plt.xlabel("Proportion of cases")
-plt.ylabel("Frequency")
-plt.title("Impact of Contact Tracing on Perceived Infection Sources")
-plt.legend()
-plt.tight_layout()
-plt.show()
+def run_simulation_and_plot(num_repetitions=1000):
+  """
+  Runs the simulation multiple times and plots the results.
+  
+  Parameters:
+  - num_repetitions: Number of times to repeat the simulation for reliable estimates.
+  """
+
+  # Run the simulation
+  results = [simulate_event(m) for m in range(num_repetitions)]
+  props_df = pd.DataFrame(results, columns=["Infections", "Traces"])
+
+  # Plotting the results
+  plt.figure(figsize=(10, 6))
+  sns.histplot(props_df['Infections'], color="blue", alpha=0.75, binwidth=0.05, kde=False, label='Infections from Weddings')
+  sns.histplot(props_df['Traces'], color="red", alpha=0.75, binwidth=0.05, kde=False, label='Traced to Weddings')
+  plt.xlabel("Proportion of cases")
+  plt.ylabel("Frequency")
+  plt.title("Impact of Contact Tracing on Perceived Infection Sources")
+  plt.legend()
+  plt.tight_layout()
+  plt.show()
+
+# Run the simulation with a specified number of repetitions
+run_simulation_and_plot(num_repetitions=1000)
