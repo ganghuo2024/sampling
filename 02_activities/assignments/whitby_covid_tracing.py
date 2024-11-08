@@ -72,27 +72,27 @@ def simulate_event(m):
 
 
 def run_simulation_and_plot(num_repetitions=1000):
-    """
-    Runs the simulation multiple times and plots the results.
-    
-    Parameters:
-    - num_repetitions: Number of times to repeat the simulation for reliable estimates.
-    """
+  """
+  Runs the simulation multiple times and plots the results.
+  
+  Parameters:
+  - num_repetitions: Number of times to repeat the simulation for reliable estimates.
+  """
 
-    # Run the simulation
-    results = [simulate_event(m) for m in range(num_repetitions)]
-    props_df = pd.DataFrame(results, columns=["Infections", "Traces"])
+  # Run the simulation
+  results = [simulate_event(m) for m in range(num_repetitions)]
+  props_df = pd.DataFrame(results, columns=["Infections", "Traces"])
 
-    # Plotting the results
-    plt.figure(figsize=(10, 6))
-    sns.histplot(props_df['Infections'], color="blue", alpha=0.75, binwidth=0.05, kde=False, label='Infections from Weddings')
-    sns.histplot(props_df['Traces'], color="red", alpha=0.75, binwidth=0.05, kde=False, label='Traced to Weddings')
-    plt.xlabel("Proportion of cases")
-    plt.ylabel("Frequency")
-    plt.title("Impact of Contact Tracing on Perceived Infection Sources")
-    plt.legend()
-    plt.tight_layout()
-    plt.show()
+  # Plotting the results
+  plt.figure(figsize=(10, 6))
+  sns.histplot(props_df['Infections'], color="blue", alpha=0.75, binwidth=0.05, kde=False, label='Infections from Weddings')
+  sns.histplot(props_df['Traces'], color="red", alpha=0.75, binwidth=0.05, kde=False, label='Traced to Weddings')
+  plt.xlabel("Proportion of cases")
+  plt.ylabel("Frequency")
+  plt.title("Impact of Contact Tracing on Perceived Infection Sources")
+  plt.legend()
+  plt.tight_layout()
+  plt.show()
 
 # Run the simulation with a specified number of repetitions
 run_simulation_and_plot(num_repetitions=1000)
