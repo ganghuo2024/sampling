@@ -16,30 +16,78 @@ Select one of the scenarios below and design a survey to meet the need(s) outlin
 
 # Your Changes
 
-The number of your chosen topic: `#`
+The number of your chosen topic: `#`1
 
 Describe the purpose of your survey:
 ```
 write your answer here...
+The purpose of this survey is to understand the underlying reasons for the high turnover rate among entry- and lower-level positions at our company, focusing on job satisfaction, work environment, career development opportunities, and management practices.
+
 ```
 
 Describe your target population, sampling frame, sampling units, and observational units:
 ```
 write your answer here...
+Target Population: Employees in entry- and lower-level positions within the company.
+Sampling Frame: All current employees in entry- and lower-level roles across various departments.
+Sampling Units: Individual employees in the specified roles.
+Sampling Strategy: Stratified random sampling to ensure representation from different departments and demographic groups.
+
+
 ```
 
 Your 5-10 question survey:
 ```
-1. write your question here...
-2. write your question here...
-3. write your question here...
-4. write your question here...
-5. write your question here...
-6. write your question here... (optional)
-7. write your question here... (optional)
-8. write your question here... (optional)
-9. write your question here... (optional)
-10. write your question here... (optional)
+1. On a scale of 1 to 5, how satisfied are you with your current job role?
+
+2. How would you rate the effectiveness of communication from your immediate supervisor?
+   Very Poor
+   Poor
+   Average
+   Good
+   Very Good
+
+3. What aspects of your job do you find most challenging? (Select all that apply)
+   Workload
+   Lack of career development
+   Compensation
+   Work-life balance
+   Management
+   Other (please specify)
+
+4. How likely are you to seek employment outside the company within the next six months?
+   Very Unlikely
+   Unlikely
+   Neutral
+   Likely
+   Very Likely
+ 
+5. Do you feel there are adequate opportunities for career advancement within the company?
+   Yes
+   No
+
+6. How well do you think the company recognizes and rewards your contributions?
+   Not at all
+   Slightly
+   Moderately
+   Very
+   Extremely
+
+7. What changes would most improve your job satisfaction? (Open-ended)
+
+8. Do you feel you have a good work-life balance in your current role?
+   Yes
+   No
+
+9. How would you rate the overall work environment in your department?
+   Very Poor
+   Poor
+   Average
+   Good
+   Very Good
+
+10. Please provide any additional comments or suggestions to help improve employee satisfaction. (Open-ended)
+
 ```
 
 ## Rubric
