@@ -30,8 +30,9 @@ Describe your target population, sampling frame, sampling units, and observation
 write your answer here...
 Target Population: Employees in entry- and lower-level positions within the company.
 Sampling Frame: All current employees in entry- and lower-level roles across various departments.
-Sampling Units: Individual employees in the specified roles.
+Sampling Units:  Individual employees in entry- and lower-level positions, stratified by department and demographic characteristics.
 Sampling Strategy: Stratified random sampling to ensure representation from different departments and demographic groups.
+Observational Units: The responses each employee provides to the survey questionnaire.
 
 
 ```
